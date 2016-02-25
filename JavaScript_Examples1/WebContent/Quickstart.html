@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>javascript Examples</title>
+<script type="text/javascript" src="Script/QuickStart.js"></script>
+<script type="text/javascript">
+ alert("hello from Head");
+ 
+ function showMessage(){
+	 alert("Show Message");
+ }
+ function showMessage(){
+	 alert("Show Message-2");
+ }
+ 
+
+ </script>
+</head>
+<body>
+<input type="button" id="btn1" value="Submit" >
+
+<!--  <script type="text/javascript">
+alert("hello from Body");
+showMessage();
+greet();
+
+</script>
+-->
+<script type="text/javascript">
+ var element =document.getElementById("btn1");
+ 
+ /* element.addEventListener("click", function(){
+	 alert('hello from event handler');
+	 }); */
+ 
+ //element.addEventListener("click", showMessage());
+ element.addEventListener("click", showMessage);
+
+ </script> 
+</body>
+</html>

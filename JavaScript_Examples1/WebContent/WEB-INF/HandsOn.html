@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>select menu</title>
+<link href="css/OrderDesign.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="Script/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+$(document).ready(
+	    function(){
+	        $.getJSON('./data.txt',function(data){
+	        	$.each(data,function(index, d){
+	        	       $('#table').append(
+	        	           '<tr>' +'<td><input type="checkbox"></td>'+
+	        	               '<td>' + d.r
+	        	               '</td>' +
+	        	           '</tr>'
+	        	       );          
+	            }
+	        );
+	    }
+	);
+</script>
+</head>
+<body>
+
+<table id="table" border="1">
+  <tr>
+     <td><input type="checkbox" value="1" name="item1"></td>
+     <td></td>
+     <td></td>
+  </tr>
+
+</table>
+
+</body>
+</html>
