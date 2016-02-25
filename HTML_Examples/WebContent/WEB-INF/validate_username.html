@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Welcome</title>
+
+
+</head>
+<body>
+
+<form action="" method="get">
+<table>
+ <tr><td><label>Username :</label></td>
+<td> <input type="text" id="name" ><span id="msg"></span> </td>
+ </tr>
+<tr><td> <input type="submit" value="ok" name="submit"></td></tr>
+ </table>
+ </form>
+ 
+ <script type="text/javascript">
+ var element = document.getElementById("name");
+ var  ele1=document.getElementById("msg");
+ element.addEventListener("keypress", function(event){
+	 var username=element.value;
+	 
+
+	 if(username.length<=3)
+		 {
+		 msgText="Weak";
+		 ele1.style.color="red";
+		 }
+	 else if(username.length<=6)
+	 { 
+		 msgText="medium";
+		 }
+	 else
+	 { 
+		 msgText="Strong";
+		 }
+		 ele1.innerHTML=msgText;
+ });
+ </script>
+ 
+</body>
+</html>
