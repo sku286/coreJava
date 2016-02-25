@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Execution Order</title>
+<script type="text/javascript" src="jsLibs/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+
+//only  one onload() function is called
+//first the global function is called then the onload
+$(function(){
+
+	alert("Ready Called");
+});
+
+$(function(){
+
+	$("h1").css("color","blue");
+	$("#detail").css("font-size","2.5em");
+	$("ul>li").css("color","red");
+	$("img").on('click',function(){
+		alert("Koala photo");
+	});
+});
+
+
+</script>
+</head>
+<body>
+
+<h1>JQuery Examples</h1>
+<h3 id="detail">Ajax Calls</h3>
+
+ <ul>
+   <li>UML</li>
+   <li>OOAD</li>
+   <li>RDBMS</li>
+   <li>JAVA</li>
+   <li>Ant &amp; Log4j</li>
+   <li>Design Patterns</li>
+ </ul>
+ <img alt="images/Penguins.jpg" src="images/Koala.jpg" height="150" width="200">
+ 
+ 
+</body>
+</html>

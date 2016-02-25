@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Execution Order</title>
+<script type="text/javascript" src="jsLibs/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+
+
+//only  one onload() function is called
+window.onload=function(){
+	alert("on Load CALLED");
+}
+
+window.onload=function(){
+	alert("on Load-2 CALLED");
+}
+
+//first the global function is called then the onload
+$(function(){
+
+	alert("Ready Called");
+});
+
+
+$(function(){
+
+	alert("Ready-2 Called");
+});
+</script>
+</head>
+<body>
+
+<h1>JQuery Examples</h1>
+<h3 id="detail">Ajax Calls</h3>
+
+ <ul>
+   <li>UML</li>
+   <li>OOAD</li>
+   <li>RDBMS</li>
+   <li>JAVA</li>
+   <li>Ant &amp; Log4j</li>
+   <li>Design Patterns</li>
+ </ul>
+</body>
+</html>
