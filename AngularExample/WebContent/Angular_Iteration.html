@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Angular Iteration</title>
+<script type="text/javascript" src="Scripts/angular.js"></script>
+<script type="text/javascript">
+	
+	var app= angular.module("oneWay",[]);
+	
+	app.controller('itemController',function($scope){
+        $scope.items = [
+                        { Name: "Soap", Price: 50, Quantity: 10 },
+                        { Name: "Shaving cream", Price: 25, Quantity: 15 },
+                        { Name: "Shampoo", Price: 100, Quantity: 5 }
+                    ];
+
+        
+
+        });
+</script>
+</head>
+<body>
+	<div data-ng-app="oneWay" data-ng-controller="itemController">
+			<table border="1">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-ng-repeat="item in items | orderBy:'Quantity'">
+                        <td>{{item.Name}}</td>
+                        <td>{{item.Price | currency}}</td>
+                        <td>{{item.Quantity}}</td>
+                    </tr>
+                </tbody>
+            </table>
+				</div>
+
+</body>
+</html>
