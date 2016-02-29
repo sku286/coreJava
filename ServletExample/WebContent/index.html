@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="ISO-8859-1">
+    <title>My First Web Page</title>
+    <link href="css/Styles.css" type="text/css"  rel="stylesheet">
+ </head>
+ 
+<body>
+ <header>
+ 
+   <div id="hdleft">
+   <img alt="Logo" src="images/Tulips.jpg" />
+   </div>
+   
+   <div id="hdright">
+   <h1 align="center">Tulips Resturant</h1>
+   </div>
+   
+ </header>
+ <nav>
+ <ul>
+   <li><a href="Home.html">HOME</a></li>
+   <li><a href="Book.html">BOOK</a></li>
+   <li><a href="Order.html">ORDER</a></li>
+   <li><a href="Review.html">REVIEW</a></li>
+   <li><a href="Contact.html">CONTACT</a></li>
+   
+ </ul>
+ 
+ </nav>
+ <section></section>
+ <form action="greet"  method="get">
+ <table>
+  <tr>
+    <td><label>UserName</label></td>
+    <td><input type="text" id="username" name="username" required="required" placeholder="Enter Username"/></td>
+   
+ </tr>
+ 
+ <tr>
+    <td><label>Password</label></td>
+    <td><input type="password" name="password"/></td>
+ </tr>
+ <tr>
+    <td><label>Role</label></td>
+    <td><select name="role">
+               <option>Admin</option>
+               <option>Chef</option>
+               <option>Waiter</option>
+        </select>
+    </td>
+ </tr>
+ <tr>
+    <td colspan="2"><input type="submit" name="submit" value="login"/></td>
+   
+ </tr>
+ 
+ </table>
+ <!-- <script type="text/javascript">
+ var element=document.getElementById("username");
+ 
+ element.addEventListener('copy', function(event){
+	 event.preventDefault();
+	 alert("Copy not Allowed");
+});
+	 
+ element.addEventListener('paste', function(event){
+		 event.preventDefault();
+		 alert("paste not Allowed");
+});
+		 
+ document.addEventListener('contextmenu', function(event){
+	event.preventDefault();
+			 alert("rightclick not Allowed");		 
+ }); 
+ 
+ </script> -->
+ </form>
+</body>
+</html>
