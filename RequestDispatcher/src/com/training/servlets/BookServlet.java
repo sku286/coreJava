@@ -34,10 +34,14 @@ public class BookServlet extends HttpServlet {
 		
 		BookManager mgr = new BookManager();
 		HashMap<Long,Book> bookList = null;
-		if(request.getParameter("search")!=null){
+		
+		String str=request.getParameter("bookid");
+		//System.out.println(str.getClass());
+		
+		if(request.getParameter("bookid")!=null){
 			bookList = new HashMap<Long,Book>();
-			Book bookResult = mgr.findBookById(Long.parseLong(request.getParameter("search")));
-			bookList.put(bookResult.getBookNumber(), bookResult);
+			Book bookResult = mgr.findBookById(Long.parseLong(str));
+			bookList.put((long)1, bookResult);
 		}
 		else{
 			bookList = mgr.getAllBooks();

@@ -6,9 +6,14 @@ import com.training.entity.Book;
 public class BookManager {
 
 	private HashMap<Long, Book> booklist;
+	void init(){
+	booklist  = new HashMap<Long, Book>();
+	Book obj1 =new Book(101, "java", "abc", 450);
+	Book obj2 =new Book(102, "physics", "einstein", 900);
 	
-
-
+	booklist.put((long) 1,obj1);
+	booklist.put((long) 2,obj2);
+	}
 	
 		
 		
@@ -16,11 +21,9 @@ public class BookManager {
 	
 	public BookManager() {
 		super();
-		booklist  = new HashMap<Long, Book>();
-		Book obj1 =new Book(101, "java", "abc", 450);
-		Book obj2 =new Book(102, "physics", "einstein", 900);
-		booklist.put((long) 1,obj1);
-		booklist.put((long) 2,obj2);
+		init();
+		
+		
 	}
 	public HashMap<Long, Book> getAllBooks()
 	 {

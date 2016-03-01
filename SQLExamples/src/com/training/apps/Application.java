@@ -16,9 +16,9 @@ public class Application {
 		//System.out.println(rowAdded + ":=Rows Added");
 		/*Customer foundCustomer = dao.find(124);
 		System.out.println(cust.showcustomer());*/
-		/*List<Customer> foundCustomer = dao.findAll();
-	    System.out.println(foundCustomer);*/
-		System.out.println(dao.update(123));
+		List<Customer> foundCustomer = dao.findAll();
+	    System.out.println(foundCustomer);
+		//System.out.println(dao.update(123));
 	}
 
 }
