@@ -55,5 +55,12 @@ return cust;
 	
 }
 
+@Override
+public String toString() {
+	// TODO Auto-generated method stub
+	String cust= cutomerid + ";" + customername + ":" + email_id  + ":" + handPhone;
+	return cust;
+}
+
 
 }

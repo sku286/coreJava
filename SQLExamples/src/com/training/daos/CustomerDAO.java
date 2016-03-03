@@ -79,15 +79,14 @@ public class CustomerDAO implements DAO<Customer> {
 		Customer cus =null;
 		try
 		{
-			while(rs.next())
-			{
+
 				
 		int customerid = rs.getInt("Cutomerid");
 		String customer = rs.getString("Customername");
 		String email=rs.getString("email_id");
 		long phone = rs.getLong("handPhone");
 		cus = new Customer(customerid,customer,email,phone);
-		   }
+		   
 		}
 		catch (Exception e) 
 		{

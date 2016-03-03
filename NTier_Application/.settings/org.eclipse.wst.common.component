@@ -2,10 +2,7 @@
     <wb-module deploy-name="NTier_Application">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <dependent-module archiveName="conn.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/D:/conn.jar">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="ojdbc14.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/oraclexe/app/oracle/product/10.2.0/server/jdbc/lib/ojdbc14.jar">
+        <dependent-module archiveName="conn1.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/sku286/Desktop/conn1.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <property name="context-root" value="NTier_Application"/>
